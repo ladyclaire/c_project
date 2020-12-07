@@ -252,9 +252,9 @@ char* replaceMultiSpaceToOne(char *splited,const char *src)
         int j=0;
 
 
-        while(*src)//注意这里如果是： *s++ 那么复制就会跳过第一个字符 因为它自己先移动了一个
+        while(*src)
         {
-            if(*src !=' ' || *(src+1) != ' ') // 其实字符放在前面 是个好的习惯
+            if(*src !=' ' || *(src+1) != ' ') 
             {
                 splited[j++] = *src;
             }
@@ -532,7 +532,7 @@ int main(void)
 //	    printf("\nconvert date[%s]\n",convert_english_date_to_digital(digitalDate,ARRAY_SIZE(digitalDate),"Jul 20, 2020"));
     while(0!=strcmp(exitStr,src))
     {
-        gets(src); //遇到回车退出
+        gets(src); 
         //fgets(src, sizeof(src), stdin);
         dst = (char*)malloc(strlen(src)*sizeof(char));//100*sizeof(char)
         //printf("splited string :%s\n" ,replaceMultiSpaceToOne(dst,src));
@@ -572,6 +572,8 @@ int main(void)
         free(dst);
         dst = NULL;
     }
+
+    printf("just add a single printf line \n");
 ////  char *cmd="md5sum rep | awk {'print $1'}" ;
 ////  char resMsg[1024]={""};
 ////  Exec(cmd,resMsg,sizeof(resMsg));
