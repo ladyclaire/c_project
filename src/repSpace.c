@@ -574,6 +574,7 @@ int main(void)
     }
 
     printf("just add a single printf line \n");
+    printf("second printf");
 ////  char *cmd="md5sum rep | awk {'print $1'}" ;
 ////  char resMsg[1024]={""};
 ////  Exec(cmd,resMsg,sizeof(resMsg));
